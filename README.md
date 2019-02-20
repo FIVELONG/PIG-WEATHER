@@ -1,6 +1,6 @@
-# imagine-pig
+# pig-weather
 
-> 梦猪世界
+> 猪维乐
 
 > 扫码体验
 ![image](https://github.com/FIVELONG/PIG-WEATHER/blob/master/static/img/gh_22732789c69e_258.jpg)
