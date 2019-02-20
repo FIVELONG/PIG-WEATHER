@@ -1,0 +1,69 @@
+<template name="weather$80a6417e">
+  <view wx:if="{{nowWeather}}" class="_div data-v-5cf994d0 weatherPanel">
+    <view class="_div data-v-5cf994d0 today-box {{nowWeather.cond_code == 100  ? 'sunny'  : nowWeather.cond_code >= 101 && nowWeather.cond_code < 300    ? 'cloud'    : nowWeather.cond_code >= 300 && nowWeather.cond_code < 400      ? 'rain'      : nowWeather.cond_code >= 400 && nowWeather.cond_code < 500        ? 'snow'        : nowWeather.cond_code == 500 ||          nowWeather.cond_code == 501 ||          nowWeather.cond_code == 509 ||          nowWeather.cond_code == 510 ||          nowWeather.cond_code == 514 ||          nowWeather.cond_code == 515          ? 'fog'          : nowWeather.cond_code < 599            ? 'haze'            : 'other'}}">
+      <view class="_p data-v-5cf994d0 location">{{location}}</view>
+      <view class="_p data-v-5cf994d0 time">今天（星期{{today.formatTime}}）</view>
+      <view class="_p data-v-5cf994d0 tmp">{{nowWeather.tmp}}</view>
+      <view class="_p data-v-5cf994d0 cond">{{nowWeather.cond_txt}}：{{today.tmp_min + '℃ ~ ' + today.tmp_max +'℃'}}</view>
+    </view>
+    <view class="_ul data-v-5cf994d0 weather-list">
+      <view class="_li data-v-5cf994d0 clearfix" wx:key="index" key="{{index}}" wx:for="{{dayAfter}}" wx:for-index="index" wx:for-item="item">
+        <label class="_span data-v-5cf994d0 day">星期{{item.formatTime}}</label>
+        <label class="_span data-v-5cf994d0 cond">{{item.cond_txt_d}}</label>
+        <label class="_span data-v-5cf994d0 tmp">{{item.tmp_min + '℃ ~ ' + item.tmp_max +'℃'}}</label>
+      </view>
+    </view>
+    <view class="_div data-v-5cf994d0">
+      <form name="pushMsgFm" report-submit="true" data-type="submit" bindsubmit="handleProxy" data-eventid="{{'7'}}" data-comkey="{{$k}}" class="_form data-v-5cf994d0">
+        <button class="_button data-v-5cf994d0 btn">
+          <view class="_div data-v-5cf994d0 aa">
+            <form name="pushMsgFm" report-submit="true" data-type="submit" bindsubmit="handleProxy" data-eventid="{{'6'}}" data-comkey="{{$k}}" class="_form data-v-5cf994d0">
+              <button class="_button data-v-5cf994d0 btn" formType="submit">
+                <view class="_div data-v-5cf994d0 aa">
+                  <form name="pushMsgFm" report-submit="true" data-type="submit" bindsubmit="handleProxy" data-eventid="{{'5'}}" data-comkey="{{$k}}" class="_form data-v-5cf994d0">
+                    <button class="_button data-v-5cf994d0 btn" formType="submit">
+                      <view class="_div data-v-5cf994d0 aa">
+                        <form name="pushMsgFm" report-submit="true" data-type="submit" bindsubmit="handleProxy" data-eventid="{{'4'}}" data-comkey="{{$k}}" class="_form data-v-5cf994d0">
+                          <button class="_button data-v-5cf994d0 btn" formType="submit">
+                            <view class="_div data-v-5cf994d0 aa">
+                              <form name="pushMsgFm" report-submit="true" data-type="submit" bindsubmit="handleProxy" data-eventid="{{'3'}}" data-comkey="{{$k}}" class="_form data-v-5cf994d0">
+                                <button class="_button data-v-5cf994d0 btn" formType="submit">
+                                  <view class="_div data-v-5cf994d0 aa">
+                                    <form name="pushMsgFm" report-submit="true" data-type="submit" bindsubmit="handleProxy" data-eventid="{{'2'}}" data-comkey="{{$k}}" class="_form data-v-5cf994d0">
+                                      <button class="_button data-v-5cf994d0 btn" formType="submit">
+                                        <view class="_div data-v-5cf994d0 aa">
+                                          <form name="pushMsgFm" report-submit="true" data-type="submit" bindsubmit="handleProxy" data-eventid="{{'1'}}" data-comkey="{{$k}}" class="_form data-v-5cf994d0">
+                                            <button class="_button data-v-5cf994d0 btn" formType="submit">
+                                              <view class="_div data-v-5cf994d0 aa">
+                                                <form name="pushMsgFm" report-submit="true" data-type="submit" bindsubmit="handleProxy" data-eventid="{{'0'}}" data-comkey="{{$k}}" class="_form data-v-5cf994d0">
+                                                  <button class="_button data-v-5cf994d0 btn" formType="submit">
+                                                    <view class="_div data-v-5cf994d0 aa"> {{userInfo.formid ? '已订阅' : '订阅天气'}} </view>
+                                                  </button>
+                                                </form>
+                                              </view>
+                                            </button>
+                                          </form>
+                                        </view>
+                                      </button>
+                                    </form>
+                                  </view>
+                                </button>
+                              </form>
+                            </view>
+                          </button>
+                        </form>
+                      </view>
+                    </button>
+                  </form>
+                </view>
+              </button>
+            </form>
+          </view>
+        </button>
+      </form>
+    </view>
+    <modal hidden="{{hiddenCityChoose}}" title="{{cityModal.title}}" confirm-text="{{cityModal.confirm}}" cancel-text="{{cityModal.cancel}}" bindcancel="handleProxy" bindconfirm="handleProxy" data-eventid="{{'8'}}" data-comkey="{{$k}}" class="_modal data-v-5cf994d0">
+      <input type="text" placeholder="请输入城市" class="_input data-v-5cf994d0" />
+    </modal>
+  </view>
+</template>

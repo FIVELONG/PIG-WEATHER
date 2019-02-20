@@ -1,0 +1,1 @@
+<import src="../../components/weather$80a6417e" /><template is="weather$80a6417e" data="{{ ...$root['0'], $root }}"/>

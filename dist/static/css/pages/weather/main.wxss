@@ -1,0 +1,82 @@
+
+.btn {
+  width: 1rpx;
+  height: 1rpx;
+  margin: 0;
+  padding: 0;
+  border-color: transparent;
+  border: none;
+  background-color: transparent;
+}
+.aa {
+  position: fixed;
+  width: 156rpx;
+  top: 170rpx;
+  right: 0;
+  font-size: 30rpx;
+  color: #fff;
+}
+._button::after {
+  border: none;
+}
+.contact {
+  float: right;
+  margin-top: 10rpx;
+  color: #fff;
+  background-color: transparent;
+}
+.weatherPanel .sunny {
+  background-image: url("https://www.imaginepig.com/img/home_bg_sunny.jpg");
+}
+.weatherPanel .cloud,
+.weatherPanel .other {
+  background-image: url("https://www.imaginepig.com/img/home_bg_cloud.jpg");
+}
+.weatherPanel .rain {
+  background-image: url("https://www.imaginepig.com/img/home_bg_rain.jpg");
+}
+.weatherPanel .snow {
+  background-image: url("https://www.imaginepig.com/img/home_bg_xue.jpg");
+}
+.weatherPanel .fog {
+  background-image: url("https://www.imaginepig.com/img/home_bg_wu.jpg");
+}
+.weatherPanel .haze {
+  background-image: url("https://www.imaginepig.com/img/home_bg_mai.jpg");
+}
+.weatherPanel .today-box {
+  height: 770rpx;
+  padding-top: 170rpx;
+  color: #fff;
+  text-align: center;
+  background-size: 100% 100%;
+  box-sizing: border-box;
+}
+.weatherPanel .today-box .location {
+  font-size: 48rpx;
+}
+.weatherPanel .today-box .time {
+  padding-left: 1%;
+  font-size: 24rpx;
+}
+.weatherPanel .today-box .tmp {
+  line-height: 240rpx;
+  font-size: 240rpx;
+}
+.weatherPanel .today-box .cond {
+  font-size: 60rpx;
+}
+.weatherPanel .weather-list ._li {
+  padding: 0 30rpx;
+  line-height: 94rpx;
+  font-size: 34rpx;
+  color: #333;
+  box-shadow: 0 2rpx 0 0 rgba(240, 240, 240, 0.5);
+}
+.weatherPanel .weather-list ._li .day {
+  float: left;
+  width: 300rpx;
+}
+.weatherPanel .weather-list ._li .tmp {
+  float: right;
+}

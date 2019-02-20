@@ -1,0 +1,12 @@
+{
+  "pages": [
+    "pages/weather/main"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#496ee2",
+    "navigationBarTitleText": "猪维乐",
+    "navigationBarTextStyle": "light",
+    "navigationStyle": "custom"
+  }
+}
