@@ -2,6 +2,9 @@
 
 > 梦猪世界
 
+扫码体验
+https://github.com/FIVELONG/PIG-WEATHER/blob/master/static/img/gh_22732789c69e_258.jpg
+
 ## Build Setup
 
 ``` bash
